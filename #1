@@ -1,0 +1,13 @@
+-문제 1
+한 회사에서 300개 이상의 글로벌 웹사이트와 애플리케이션을 호스팅 합니다.
+이 회사는 매일 30TB 이상의 클릭스트림 데이터를 분석할 플랫폼이 필요합니다.
+솔루션 설계자는 클릭스트림 데이터를 전송하고 처리하기 위해 무엇을 해야 합니까?
+
+-선택지
+1. 데이터를 Amazon S3 버킷에 보관하고 데이터로 Amazon EMR 클러스터를 실행하여 분석을 생성하도록 AWS Data Pipeline을 설계합니다.
+2. Amazon EC2 인스턴스의 Auto Scaling 그룹을 생성하여 데이터를 처리하고 Amazon Redshift가 분석에 사용할 수 있도록 Amazon S3 데이터 레이크로 보냅니다.
+3. 데이터를 Amazon CloudFront에 캐시합니다. 데이터를 Amazon S3 버킷에 저장합니다. 객체가 S3 버킷에 추가될 때. AWS Lambda 함수를 실행하여 분석을 위해 데이터를 처리합니다.
+4. Amazon Kinesis Data Streams에서 데이터를 수집합니다. Amazon Kinesis Data Firehose를 사용하여 데이터를 Amazon S3 데이터 레이크로 전송합니다. 분석을 위해 Amazon Redshift에 데이터를 로드합니다.
+
+-기술분석
+Amazon EC2: 확장 가능한 온디맨드 컴퓨팅 용량(필요할 때 늘리거나 줄이기 가능)을 제공하는 서비스. EC2를 사용하면 필요한 만큼 가상 서버를 프로비저닝하여, 보안 및 네트워킹을 구성하고, 스토리지를 관리
